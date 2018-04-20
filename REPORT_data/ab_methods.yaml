@@ -1,0 +1,76 @@
+abstract: "\n        The MinION is a portable DNA sequencer that generates long error-prone\
+  \ reads.\n         As both the hardware and analysis software are updated regularly,\
+  \ the most suitable pipeline for \n         subsequent analyses of a dataset generated\
+  \ with a given combination of hardware and software for a \n         given organism\
+  \ is not always clear. Here we present a benchmark for a selection of <i>de novo</i>\
+  \ \n         assemblers available to MinION users, on a read set of <i>Escherichia\
+  \ coli</i>. This benchmark is based on a \n         <a href=\\>benchmarking routine</a>,\
+  \ designed to facilitate easy replication on a read set of choice \n         and\
+  \ addition of other <i>de novo</i> assembly pipelines.\n        "
+assembly_quality: "\n        Produced assemblies were analyzed and compared on continuity\
+  \ and agreement with the reference genome. Quast \n        (version: 4.6.2) was\
+  \ used to determine a wide array of quality metrics in both quality categories and\
+  \ produce \n        synteny plots. To elucidate any bias in the occurence of certain\
+  \ sequences, 5-mers in the assemblies and the \n        reference genomes were compared\
+  \ using Jellyfish (version: 2.2.9). Finally, results were summarized using MultiQC.\n\
+  \        "
+authors: Carlos de Lannoy, data from [Loman Labs](http://lab.loman.net/2017/03/09/ultrareads-for-nanopore/)
+pipelines: "<h4>canu</h4>Canu is a complete OLC assembly pipeline that was shown to\
+  \ work well for the assembly of error-prone  reads. It performs a  pre-assembly\
+  \ read correction, read trimming, assembly using the minhash alignment  process\
+  \ (MHAP) and ultimately a consensus finding step.<br>&zwnj;<br>&zwnj;<b>Included\
+  \ tools:</b><ul><li>canu (version: snapshot v1.7 +0 changes (r8692 c9ef9219a265e0bbe3a311cca7d28aa02b7517d3))\
+  \ </li></ul><br>&zwnj;<b>Used command:</b><pre><code>${CANU} -d ${INT}/assembler_results/canu\
+  \ -p canu_assembly maxThreads=${NB_THREADS} useGrid=false genomeSize=$REFGENOME_SIZE\
+  \ -nanopore-raw ${INT}/all_reads.fasta\n\ncp ${INT}/assembler_results/canu/canu_assembly.contigs.fasta\
+  \ ${INT}/assembler_results/all_assemblies/canu.fasta</code></pre><h4>smartdenovo</h4>SMARTdenovo\
+  \ is a long read OLC assembly pipeline that was originally intended to work with\
+  \  PacBio reads, but has been shown to produce assemblies of reasonably high continuity\
+  \ from MinION reads as well.<br>&zwnj;<br>&zwnj;<b>Included tools:</b><ul><li>SMARTdenovo\
+  \ (version: none defined) </li></ul><br>&zwnj;<b>Used command:</b><pre><code>${SMARTDENOVO}\
+  \ -p ${INT}/assembler_results/smartdenovo/smartdenovo_assembly ${INT}/all_reads.fasta\
+  \ > ${INT}/assembler_results/smartdenovo/smartdenovo_assembly.mak && (make -f ${INT}/assembler_results/smartdenovo/smartdenovo_assembly.mak)\n\
+  if [ -e ${INT}/assembler_results/smartdenovo/smartdenovo_assembly.cns ]; then\n\t\
+  cp ${INT}/assembler_results/smartdenovo/smartdenovo_assembly.cns ${INT}/assembler_results/all_assemblies/smartdenovo.fasta\n\
+  elif [ -e ${INT}/assembler_results/smartdenovo/smartdenovo_assembly.dmo.lay.utg\
+  \ ]; then\n\tcp ${INT}/assembler_results/smartdenovo/smartdenovo_assembly.dmo.lay.utg\
+  \ ${INT}/assembler_results/all_assemblies/smartdenovo.fasta\nfi</code></pre><h4>minimap2\
+  \ miniasm nanopolish</h4>Minimap2 is a fast all-vs-all mapper of reads that relies\
+  \ on sketches of sequences, composed of minimizers. Miniasm uses the found overlaps\
+  \ to construct an assembly graph. As a consensus step is lacking in this pipeline,\
+  \ post-assembly polishing is often required. In this case, Nanopolish was used.<br>&zwnj;<br>&zwnj;<b>Included\
+  \ tools:</b><ul><li>minimap2 (version: <${MINIMAP2} -V>) </li><li>miniasm (version:\
+  \ <${MINIASM} -V>) </li><li>nanopolish (version: <${NANOPOLISH} --version | grep\
+  \ -Po '(?<=nanopolish version ).+'>) </li></ul><br>&zwnj;<b>Used command:</b><pre><code>${MINIMAP2}\
+  \ -x ava-ont -t ${NB_THREADS} ${INT}/all_reads.fastq ${INT}/all_reads.fastq | gzip\
+  \ -1 > ${INT}/assembler_results/minimap2_miniasm_nanopolish/minimap2.paf.gz && (${MINIASM}\
+  \ -f ${INT}/all_reads.fastq ${INT}/assembler_results/minimap2_miniasm_nanopolish/minimap2.paf.gz\
+  \ > ${INT}/assembler_results/minimap2_miniasm_nanopolish/minimap2_miniasm.gfa)\n\
+  awk '/^S/{print \">\"$2\"\\n\"$3}' ${INT}/assembler_results/minimap2_miniasm_nanopolish/minimap2_miniasm.gfa\
+  \ | fold > ${INT}/assembler_results/minimap2_miniasm_nanopolish/minimap2_miniasm.fasta\n\
+  \n${TOOL_DIR}/scripts/other/nanopolish_std.sh ${INT}/assembler_results/minimap2_miniasm_nanopolish/minimap2_miniasm.fasta\
+  \ ${INT}/extended_parameters.config ${INT}/all_reads.fastq\n\ncp ${INT}/assembler_results/minimap2_miniasm_nanopolish/nanopolish/minimap2_miniasm_nanopolish.fasta\
+  \ ${INT}/assembler_results/all_assemblies/minimap2_miniasm_nanopolish.fasta</code></pre><h4>flye</h4>Flye\
+  \ uses A-Bruijn graphs to assemble long error-prone reads. To do so, it follows\
+  \ arbitrary paths through the assembly graph and constructs new assembly graphs\
+  \ from these paths.<br>&zwnj;<br>&zwnj;<b>Included tools:</b><ul><li>flye (version:\
+  \ 2.3.3-g47cdd0b) </li></ul><br>&zwnj;<b>Used command:</b><pre><code>$FLYE --nano-raw\
+  \ ${INT}/all_reads.fastq --genome-size ${REFGENOME_SIZE} --out-dir ${INT}/assembler_results/flye/\
+  \ --threads ${NB_THREADS}\n\ncp ${INT}/assembler_results/flye/scaffolds.fasta ${INT}/assembler_results/all_assemblies/flye.fasta</code></pre><h4>minimap2\
+  \ miniasm</h4>Minimap2 is a fast all-vs-all mapper of reads that relies on sketches\
+  \ of sequences, composed of minimizers. Miniasm uses the found overlaps to construct\
+  \ an assembly graph. As a consensus step is lacking in this pipeline, post-assembly\
+  \ polishing is often required.<br>&zwnj;<br>&zwnj;<b>Included tools:</b><ul><li>minimap2\
+  \ (version: 2.10-r764-dirty) </li><li>miniasm (version: 0.2-r168-dirty) </li></ul><br>&zwnj;<b>Used\
+  \ command:</b><pre><code>${MINIMAP2} -x ava-ont -t ${NB_THREADS} ${INT}/all_reads.fastq\
+  \ ${INT}/all_reads.fastq | gzip -1 > ${INT}/assembler_results/minimap2_miniasm/minimap2.paf.gz\
+  \ && (${MINIASM} -f ${INT}/all_reads.fastq ${INT}/assembler_results/minimap2_miniasm/minimap2.paf.gz\
+  \ > ${INT}/assembler_results/minimap2_miniasm/minimap2_miniasm.gfa)\nawk '/^S/{print\
+  \ \">\"$2\"\\n\"$3}' ${INT}/assembler_results/minimap2_miniasm/minimap2_miniasm.gfa\
+  \ | fold > ${INT}/assembler_results/minimap2_miniasm/minimap2_miniasm.fasta\n\n\
+  cp ${INT}/assembler_results/minimap2_miniasm/minimap2_miniasm.fasta ${INT}/assembler_results/all_assemblies/minimap2_miniasm.fasta</code></pre>"
+readset_quality: "\n        Reads in this dataset were generated on a Minion with\
+  \ FLO-MIN106 flowcell with SQK-RAD002 kit. The reads were basecalled \n        using\
+  \ Albacore 0.8.4. Prior to assembly, the quality of the untreated readset was analysed\
+  \ using NanoPlot (version: 1.13.0) \n        and mapped using Minimap2 (version:\
+  \ 2.10-r764-dirty). "

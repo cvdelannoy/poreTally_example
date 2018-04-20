@@ -1,0 +1,80 @@
+/home/lanno001/poreTally/lib/smartdenovo/wtpre -J 5000 /mnt/nexenta/lanno001/nobackup/ab_github_example/all_reads.fasta | gzip -c -1 > /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.fa.gz
+/home/lanno001/poreTally/lib/smartdenovo/wtzmo -t 8 -i /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.fa.gz -fo /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.dmo.ovl -k 16 -z 10 -Z 16 -U -1 -m 0.1 -A 1000
+[Thu Apr 19 17:16:37 2018] loading long reads
+[Thu Apr 19 17:16:37 2018] Done, 833 reads (length >= 0)
+[Thu Apr 19 17:16:37 2018] sorted sequences by length dsc
+[Thu Apr 19 17:16:37 2018] calculating overlaps, 8 threads
+[Thu Apr 19 17:16:37 2018] indexing 1/1
+[Thu Apr 19 17:16:37 2018] - scanning kmers (16 bp)
+0833 reads
+[Thu Apr 19 17:16:38 2018] - high frequency kmer depth is set to 100
+[Thu Apr 19 17:16:38 2018] - average kmer depth = 2
+[Thu Apr 19 17:16:38 2018] - 27 high frequency kmers (>=100)
+[Thu Apr 19 17:16:38 2018] - indexing 1438045 kmers
+0833 reads
+[Thu Apr 19 17:16:39 2018] Done
+[Thu Apr 19 17:16:39 2018] querying 1/1
+000000000000	0000000000100	7344000000000200	10772000000000300	12319000000000400	13038000000000500	13419000000000600	13601000000000700	13688000000000800	13711progress: 833 13718 100.00%, 1659.08 CPU seconds
+[Thu Apr 19 17:20:03 2018] Done
+/home/lanno001/poreTally/lib/smartdenovo/wtclp -i /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.dmo.ovl -fo /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.dmo.obt -d 3 -k 300 -m 0.1 -FT
+[Thu Apr 19 17:20:03 2018] loading alignments
+[Thu Apr 19 17:20:03 2018] 0[Thu Apr 19 17:20:03 2018] 11427
+[Thu Apr 19 17:20:04 2018] Done, 817 reads, 11427 overlaps
+[Thu Apr 19 17:20:04 2018] clipping based on overlap depth
+Before: legal overlaps = 4235
+After:  legal overlaps = 2177
+[Thu Apr 19 17:20:04 2018] Done
+0 reads were filtered by connection-checking
+18 reads were truncated by chimera-checking
+legal overlaps = 2184
+[Thu Apr 19 17:20:04 2018] Done
+--------------------------------
+== Message for debug ==
+Sequence coverage statistic:
+       12407       78372      186682      295285      413142      421379      436758      346889      237230      151327
+       54787        6238           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+           0           0           0           0           0           0           0           0           0           0
+
+Total aviable sequences: 17124521 bp
+Average Coverage(?):     7
+Genome Size(?):          2446360 bp
+--------------------------------
+[Thu Apr 19 17:20:04 2018] output
+[Thu Apr 19 17:20:04 2018] Done
+/home/lanno001/poreTally/lib/smartdenovo/wtlay -i /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.fa.gz -b /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.dmo.obt -j /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.dmo.ovl -fo /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/smartdenovo/smartdenovo_assembly.dmo.lay -w 300 -s 200 -m 0.1 -r 0.95 -c 1
+[Thu Apr 19 17:20:04 2018] loading reads
+[Thu Apr 19 17:20:04 2018] Done, 833 reads
+[Thu Apr 19 17:20:04 2018] loading reads obt information
+[Thu Apr 19 17:20:04 2018] Done
+[Thu Apr 19 17:20:04 2018] loading alignments
+loaded 3627 overlaps
+building edges
+0 overlaps2016 fine overlaps
+[Thu Apr 19 17:20:04 2018] Done
+[Thu Apr 19 17:20:04 2018] calculating edge coverage ...
+[Thu Apr 19 17:20:04 2018] removed 38 duplicate edges
+[Thu Apr 19 17:20:04 2018] Done
+[Thu Apr 19 17:20:04 2018] masked 373 contained reads
+[Thu Apr 19 17:20:04 2018] masked 38 low coverage (<1) edges
+[Thu Apr 19 17:20:04 2018] 'best_overlap' cut 1211 non-best edges
+11 tips, 7 bubbles, 0 chimera, 7 non-bog, 1 recoveries
+[Thu Apr 19 17:20:04 2018] repair 26 bog elements
+0 tips, 0 bubbles, 0 chimera, 0 non-bog, 0 recoveries
+[Thu Apr 19 17:20:04 2018] generated 87 unitigs
+[Thu Apr 19 17:20:04 2018] recovered 4 edges inter unitigs
+4 tips, 0 bubbles, 0 chimera, 0 non-bog, 0 recoveries
+[Thu Apr 19 17:20:04 2018] repair 4 bog elements
+0 tips, 0 bubbles, 0 chimera, 0 non-bog, 0 recoveries
+[Thu Apr 19 17:20:04 2018] generated 89 unitigs
+[Thu Apr 19 17:20:04 2018] recover 0 edges inter unitigs
+[Thu Apr 19 17:20:04 2018] output 10 independent unitigs
+[Thu Apr 19 17:20:04 2018] Done
+START AUTO VERSION PRINTING
+CPU_TIME(USER+SYS):1652+8

@@ -1,0 +1,32 @@
+[INFO   ]         multiqc : This is MultiQC v1.5.dev0 (d7eabf6)
+[INFO   ]         multiqc : Template    : assembler_benchmark
+[INFO   ]         multiqc : Report title: Assembler Benchmark report
+[INFO   ]         multiqc : Searching '/mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results'
+[INFO   ]         multiqc : Only using modules with 'assembler_benchmark' tag
+Searching 122 files..
+[ERROR  ]         multiqc : Oops! The 'ab_methods_section' MultiQC module broke... 
+  Please copy the following traceback and report it at https://github.com/ewels/MultiQC/issues 
+  If possible, please include a log file that triggers the error - the last file found was:
+    /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/publication_info.txt
+============================================================
+Module ab_methods_section raised an exception: Traceback (most recent call last):
+  File "/home/lanno001/poreTally/lib/python3_virtualenv/bin/multiqc", line 442, in multiqc
+    output = mod()
+  File "/home/lanno001/poreTally/lib/python3_virtualenv/lib/python3.5/site-packages/multiqc/modules/ab_methods_section/ab_methods_section.py", line 23, in __init__
+    self.publication_info = self.find_log_files('ab_methods_section/publication_info')
+  File "/home/lanno001/poreTally/lib/python3_virtualenv/lib/python3.5/site-packages/multiqc/modules/ab_methods_section/ab_methods_section.py", line 110, in publication_info
+    k, v = kv.split('=')
+ValueError: too many values to unpack (expected 2)
+============================================================
+[INFO   ] ab_read_quality : found Minimap2 alignment summary
+[INFO   ] ab_read_quality : found nanostats file
+[INFO   ]           quast : Found 5 reports
+[INFO   ]       jellyfish : Found 0 histogram files
+[INFO   ]       jellyfish : Found 6 count (dump) files
+[INFO   ]      mummerplot : found mummerplot images
+[INFO   ]    ab_cpu_times : found 5 CPU time entries
+[INFO   ]         multiqc : Compressing plot data
+[INFO   ]         multiqc : Report      : ab_github_example/summarized_results/multiqc_report/REPORT.html
+[INFO   ]         multiqc : Data        : ab_github_example/summarized_results/multiqc_report/REPORT_data
+[INFO   ]         multiqc : Plots       : ab_github_example/summarized_results/multiqc_report/multiqc_plots
+[INFO   ]         multiqc : MultiQC complete

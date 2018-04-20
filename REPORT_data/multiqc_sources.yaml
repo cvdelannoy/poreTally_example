@@ -1,0 +1,15 @@
+Jellyfish:
+  all_sections:
+    canu.count: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/kmer_abundance/count_files/canu.count
+    ecoli_k12_mg1655.count: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/kmer_abundance/count_files/ecoli_k12_mg1655.count
+    flye.count: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/kmer_abundance/count_files/flye.count
+    minimap2_miniasm.count: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/kmer_abundance/count_files/minimap2_miniasm.count
+    minimap2_miniasm_nanopolish.count: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/kmer_abundance/count_files/minimap2_miniasm_nanopolish.count
+    smartdenovo.count: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/kmer_abundance/count_files/smartdenovo.count
+QUAST:
+  all_sections:
+    canu: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/quast/report.tsv
+    flye: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/quast/report.tsv
+    minimap2_miniasm: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/quast/report.tsv
+    minimap2_miniasm_nanopolish: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/quast/report.tsv
+    smartdenovo: /mnt/nexenta/lanno001/nobackup/ab_github_example/summarized_results/quast/report.tsv

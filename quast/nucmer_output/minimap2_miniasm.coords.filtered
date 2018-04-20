@@ -1,0 +1,7 @@
+    [S1]     [E1]  |     [S2]     [E2]  |  [LEN 1]  [LEN 2]  |  [% IDY]  | [TAGS]
+=====================================================================================
+1650843 1651538 | 40914 40251 | 696 664 | 90.62 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome utg000002l
+3423442 3423548 | 1079609 1079715 | 107 107 | 94.5 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome utg000003l
+780554 780729 | 1064 1237 | 176 174 | 90.96 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome utg000004l
+391703 392973 | 65800 64574 | 1271 1227 | 91.38 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome utg000005l
+19800 20563 | 77417 78146 | 764 730 | 90.67 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome utg000007l

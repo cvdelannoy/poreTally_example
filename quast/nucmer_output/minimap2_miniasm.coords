@@ -1,0 +1,13 @@
+    [S1]     [E1]  |     [S2]     [E2]  |  [LEN 1]  [LEN 2]  |  [% IDY]  | [TAGS]
+=====================================================================================
+ 1650843  1651538  |    40914    40251  |      696      664  |    90.62  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000002l
+ 3423442  3423548  |  1079609  1079715  |      107      107  |    94.50  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000003l
+  780554   780729  |     1064     1237  |      176      174  |    90.96  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000004l
+ 2521253  2521335  |     1064     1146  |       83       83  |    97.59  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000004l
+  315229   316483  |    64584    65794  |     1255     1211  |    91.35  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000005l
+  391703   392973  |    65800    64574  |     1271     1227  |    91.38  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000005l
+ 1094244  1095503  |    65795    64580  |     1260     1216  |    91.39  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000005l
+ 2170169  2171428  |    64579    65794  |     1260     1216  |    91.39  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000005l
+   19800    20563  |    77417    78146  |      764      730  |    90.67  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000007l
+  257912   258675  |    77417    78146  |      764      730  |    90.67  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000007l
+ 3583428  3584191  |    78146    77417  |      764      730  |    90.67  | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome	utg000007l

@@ -1,0 +1,10 @@
+canu:
+  '>= 50000 bp': 7.0
+flye:
+  '>= 50000 bp': 6.0
+minimap2_miniasm:
+  '>= 50000 bp': 9.0
+minimap2_miniasm_nanopolish:
+  '>= 50000 bp': 9.0
+smartdenovo:
+  '>= 50000 bp': 10.0

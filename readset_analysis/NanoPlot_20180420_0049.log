@@ -1,0 +1,16 @@
+2018-04-20 00:49:42,629 NanoPlot 1.13.0 started with arguments Namespace(N50=False, alength=False, bam=None, barcoded=False, color='#4CB391', cram=None, downsample=None, drop_outliers=False, fasta=None, fastq=['/mnt/nexenta/lanno001/nobackup/ab_github_example/all_reads.fastq'], fastq_minimal=None, fastq_rich=None, format='png', listcolors=False, loglength=False, maxlength=None, minlength=None, minqual=None, no_N50=False, outdir='/mnt/nexenta/lanno001/nobackup/ab_github_example/analyses/readset_analysis/', percentqual=False, pickle=None, plots=['kde', 'dot'], prefix='', raw=False, readtype='1D', store=False, summary=None, threads=16, title=None, verbose=False)
+2018-04-20 00:49:42,629 Python version is: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+2018-04-20 00:49:42,632 Nanoplotter: valid output format png
+2018-04-20 00:49:42,642 Nanoget: Starting to collect statistics from plain fastq file.
+2018-04-20 00:49:52,010 Nanoget: Gathered all metrics of 1000 reads
+2018-04-20 00:49:52,031 Calculated statistics
+2018-04-20 00:49:52,032 Using sequenced read lengths for plotting.
+2018-04-20 00:49:52,033 Processed the reads, optionally filtered. 1000 reads left
+2018-04-20 00:49:52,034 Nanoplotter: Valid color #4CB391.
+2018-04-20 00:49:52,034 Nanoplotter: Creating length plots for Read length.
+2018-04-20 00:49:52,035 Nanoplotter: Using 1000 reads maximum of 771232bp.
+2018-04-20 00:50:06,033 Created length plots
+2018-04-20 00:50:06,034 Nanoplotter: Creating Read lengths vs Average read quality plots using statistics from 1000 reads.
+2018-04-20 00:50:09,259 Created LengthvsQual plot
+2018-04-20 00:50:09,259 Writing html report.
+2018-04-20 00:50:17,681 Finished!

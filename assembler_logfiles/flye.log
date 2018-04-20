@@ -1,0 +1,54 @@
+START AUTO VERSION PRINTING
+# flye
+2.3.3-g47cdd0b
+END AUTO VERSION PRINTING
+] INFO: Assembling reads
+[2018-04-19 17:16:36] INFO: Running with k-mer size: 15
+[2018-04-19 17:16:36] INFO: Reading sequences
+[2018-04-19 17:16:36] INFO: Reads N50/90: 63122 / 18363
+[2018-04-19 17:16:36] INFO: Selected minimum overlap 5000
+[2018-04-19 17:16:36] INFO: Expected read coverage: 7
+[2018-04-19 17:16:36] INFO: Generating solid k-mer index
+[2018-04-19 17:16:53] INFO: Counting kmers (1/2):
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:16:54] INFO: Counting kmers (2/2):
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:16:55] INFO: Filling index table
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:16:57] INFO: Extending reads
+[2018-04-19 17:17:15] INFO: Overlap-based coverage: 4
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:17:17] INFO: Assembled 14 draft contigs
+[2018-04-19 17:17:17] INFO: Generating contig sequences
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:17:40] INFO: Running Minimap2
+[2018-04-19 17:17:46] INFO: Computing consensus
+[2018-04-19 17:18:09] INFO: Alignment error rate: 0.206938235173
+[2018-04-19 17:18:09] INFO: Performing repeat analysis
+[2018-04-19 17:18:09] INFO: Reading sequences
+[2018-04-19 17:18:10] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:18:30] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:18:54] INFO: Aligned sequence: 66634092 / 69066566 (0.964781)
+[2018-04-19 17:18:54] INFO: Mean edge coverage: 7
+[2018-04-19 17:18:54] INFO: Resolving repeats
+[2018-04-19 17:18:54] INFO: Generating contigs
+[2018-04-19 17:18:54] INFO: Generated 10 contigs
+[2018-04-19 17:18:55] INFO: Polishing genome (1/1)
+[2018-04-19 17:18:55] INFO: Running Minimap2
+[2018-04-19 17:19:01] INFO: Separating alignment into bubbles
+[2018-04-19 17:19:29] INFO: Alignment error rate: 0.172222972221
+[2018-04-19 17:19:29] INFO: Correcting bubbles
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2018-04-19 17:23:06] INFO: Assembly statistics:
+
+	Total length:	4855641
+	Contigs:	6
+	Scaffolds:	6
+	Scaffolds N50:	1353868
+	Largest scf:	1759014
+	Mean coverage:	6
+
+[2018-04-19 17:23:06] INFO: Final assembly: /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/flye/scaffolds.fasta
+CPU_TIME(USER+SYS):2771+30

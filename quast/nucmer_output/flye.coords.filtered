@@ -1,0 +1,20 @@
+    [S1]     [E1]  |     [S2]     [E2]  |  [LEN 1]  [LEN 2]  |  [% IDY]  | [TAGS]
+=====================================================================================
+3195706 3501002 | 1 302189 | 305297 302189 | 97.41 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_1
+3501934 3548839 | 302653 348846 | 46906 46194 | 95.09 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_1
+3548958 4257592 | 348941 1048529 | 708635 699589 | 96.37 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_1
+4257664 4295832 | 1048530 1086362 | 38169 37833 | 94.91 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_1
+4295948 4641652 | 1086363 1427710 | 345705 341348 | 96.34 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_1
+1 335872 | 1427711 1759014 | 335872 331304 | 95.78 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_1
+1408586 1447391 | 37872 1 | 38806 37872 | 94.03 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_2
+1097382 1408813 | 345683 37873 | 311432 307811 | 96.16 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_2
+502400 1097577 | 935133 345684 | 595178 589450 | 97.5 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_2
+1450606 1562113 | 3602 113735 | 111508 110134 | 93.96 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_3
+1562441 1873039 | 113879 421075 | 310599 307197 | 97.32 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_3
+1873031 2112732 | 421820 659026 | 239702 237207 | 97.11 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_3
+2112965 2538399 | 659214 1078362 | 425435 419149 | 95.63 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_3
+2673964 2822003 | 1206933 1353868 | 148040 146936 | 95.47 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_3
+2455741 2518259 | 767 62661 | 62519 61895 | 97.55 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_4
+2518231 2731361 | 62662 273898 | 213131 211237 | 97.8 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_4
+335874 487140 | 164166 14859 | 151267 149308 | 95.42 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_5
+2821992 3195703 | 369562 1 | 373712 369562 | 97.27 | NC_000913.3_Escherichia_coli_str._K-12_substr._MG1655__complete_genome contig_7

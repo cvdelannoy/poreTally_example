@@ -1,0 +1,6 @@
+authors="Carlos de Lannoy, data from [Loman Labs](http://lab.loman.net/2017/03/09/ultrareads-for-nanopore/)"
+organism="Escherichia coli"
+basecaller="Albacore 0.8.4"
+kit="SQK-RAD002"
+flowcell="FLO-MIN106"
+repository_name=git@github.com:cvdelannoy/poreTally_example.git

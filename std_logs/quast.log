@@ -1,0 +1,66 @@
+/home/lanno001/poreTally/lib/quast/quast.py --threads 16 -o /mnt/nexenta/lanno001/nobackup/ab_github_example/analyses/quast -R /home/lanno001/refgenomes/ecoli_k12_mg1655.fasta --min-identity 90.0 --no-html --no-icarus --no-gc --no-sv --silent /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/canu.fasta /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/flye.fasta /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/minimap2_miniasm.fasta /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/minimap2_miniasm_nanopolish.fasta /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/smartdenovo.fasta -G gene_annotations/Escherichia_coli/ecoli_k12_mg1655.gff
+
+
+System information:
+  OS: Linux-4.4.0-116-generic-x86_64-with-Ubuntu-16.04-xenial (linux_64)
+  Python version: 3.5.2
+  CPUs number: 56
+
+Started: 2018-04-20 00:50:21
+
+Logging to /mnt/nexenta/lanno001/nobackup/ab_github_example/analyses/quast/quast.log
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used
+
+CWD: /mnt/nexenta/lanno001/nobackup
+Main parameters: 
+  Threads: 16, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/lanno001/refgenomes/ecoli_k12_mg1655.fasta ==> ecoli_k12_mg1655
+
+Contigs:
+  Pre-processing...
+  1  /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/canu.fasta ==> canu
+  2  /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/flye.fasta ==> flye
+  3  /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/minimap2_miniasm.fasta ==> minimap2_miniasm
+  4  /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/minimap2_miniasm_nanopolish.fasta ==> minimap2_miniasm_nanopolish
+  5  /mnt/nexenta/lanno001/nobackup/ab_github_example/assembler_results/all_assemblies/smartdenovo.fasta ==> smartdenovo
+
+2018-04-20 00:50:22
+Running Basic statistics processor...
+Done.
+
+2018-04-20 00:50:24
+Running Contig analyzer...
+Compiling E-MEM (details are in /home/lanno001/poreTally/lib/quast/quast_libs/MUMmer/make.log and make.err)
+Done.
+
+2018-04-20 00:51:28
+Running NA-NGA calculation...
+Done.
+
+2018-04-20 00:51:29
+Running Genome analyzer...
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2018-04-20 00:51:31
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 1: Creating PDF with all tables and plots...
+Done
+
+2018-04-20 00:51:33
+RESULTS:
+  Text versions of total report are saved to /mnt/nexenta/lanno001/nobackup/ab_github_example/analyses/quast/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /mnt/nexenta/lanno001/nobackup/ab_github_example/analyses/quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  PDF version (tables and plots) is saved to /mnt/nexenta/lanno001/nobackup/ab_github_example/analyses/quast/report.pdf
+  Log saved to /mnt/nexenta/lanno001/nobackup/ab_github_example/analyses/quast/quast.log
+
+Finished: 2018-04-20 00:51:34
+Elapsed time: 0:01:12.635879
+NOTICEs: 3; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
